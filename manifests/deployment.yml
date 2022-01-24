@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bssouzapythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bssouzapythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: bssouzapythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: bssouzapythonsamplevscodeflasktutorial 
+          image: kuberegpoc.azurecr.io/bssouzapythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000
